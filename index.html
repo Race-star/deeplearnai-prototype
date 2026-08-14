@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepLearnAI — Sistem Pembelajaran Personal Berbasis AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <span class="logo-mark">DL</span>
+      DeepLearnAI
+    </div>
+    <div class="nav-links">
+      <a href="#pendahuluan">Pendahuluan</a>
+      <a href="#kebaruan">Kebaruan</a>
+      <a href="#skenario">Skenario</a>
+      <a href="#roadmap">Roadmap & Dampak</a>
+      <a href="#produk">Produk</a>
+      <a href="#demo">Demo AI</a>
+      <a href="#tim">Tim</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="beranda" style="padding-top:56px;">
+    <div>
+      <div class="eyebrow">Pendidikan Menuju Indonesia Emas 2045</div>
+      <h1>Inovasi Sistem <span>Pembelajaran Personal</span> Berbasis AI</h1>
+      <p class="lead">DeepLearnAI dirancang bukan sebagai aplikasi tambahan yang berdiri sendiri, melainkan sebagai lapisan kecerdasan adaptif yang beroperasi di atas ekosistem pembelajaran nasional untuk menumbuhkan inovator berkelanjutan.</p>
+      <div class="btn-row">
+        <a href="#demo" class="btn btn-primary">Coba Simulasi Dasbor</a>
+        <button id="btnPoster" class="btn btn-ghost">🖼️ Lihat Poster Inovasi (Soon)</button>
+      </div>
+    </div>
+
+    <div class="neural-card">
+      <div class="neural-card-head">
+        <span>Simulasi jaringan personalisasi</span>
+      </div>
+      <canvas id="neuralCanvas"></canvas>
+      <div class="chip-row" id="studentChips">
+        <div class="chip active" data-path="0">Tito · Visual</div>
+        <div class="chip" data-path="1">Nadin · Auditori</div>
+        <div class="chip" data-path="2">Farhan · Kinestetik</div>
+      </div>
+      <div class="path-label" id="pathLabel" style="margin-top:10px; font-size:0.9rem;">Jalur aktif: <b>materi bergambar &amp; diagram</b> untuk Tito.</div>
+    </div>
+  </section>
+
+  <!-- PENDAHULUAN -->
+  <section id="pendahuluan">
+    <div class="section-head">
+      <div class="eyebrow">Pendahuluan</div>
+      <h2>Tantangan Mutu Belajar dan Ketimpangan</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-number">366</span>
+        <span class="stat-label">Skor PISA 2022 murid Indonesia pada matematika, jauh di bawah rata-rata OECD.</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">374K</span>
+        <span class="stat-label">Kekurangan guru secara nasional di tengah kebutuhan belajar yang beragam.</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">0,29</span>
+        <span class="stat-label">Efek positif (Hedges' g) teknologi adaptif berbasis AI terhadap capaian belajar.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KETERBARUAN -->
+  <section id="kebaruan">
+    <div class="section-head">
+      <div class="eyebrow">Landasan Gagasan</div>
+      <h2>5 Keterbaruan Utama DeepLearnAI</h2>
+      <p>Kebaruan ini menyelesaikan keterbatasan sistem pembelajaran digital konvensional.</p>
+    </div>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <span class="badge-icon">🧠</span>
+        <h3>Learner Model Dinamis</h3>
+        <p>Jalur belajar lebih tepat sasaran, tidak lagi bergantung pada label "pintar" atau "lemah" (berdasarkan kompetensi dan pola kesalahan).</p>
+      </div>
+      <div class="arch-card">
+        <span class="badge-icon">👨‍🏫</span>
+        <h3>Teacher-in-the-Loop</h3>
+        <p>Menguatkan profesionalitas guru dan mencegah keputusan otomatis berisiko tinggi melalui dasbor transparan.</p>
+      </div>
+      <div class="arch-card">
+        <span class="badge-icon">💡</span>
+        <h3>Innovation Studio</h3>
+        <p>Mendorong kreativitas, kolaborasi, dan orientasi keberlanjutan melalui proyek solusi lokal.</p>
+      </div>
+      <div class="arch-card">
+        <span class="badge-icon">📶</span>
+        <h3>Desain Rendah Bandwidth</h3>
+        <p>Lebih realistis untuk sekolah dengan infrastruktur beragam (cache materi & sinkronisasi tertunda).</p>
+      </div>
+      <div class="arch-card">
+        <span class="badge-icon">🔒</span>
+        <h3>Privacy by Design</h3>
+        <p>Meningkatkan keamanan, keadilan, dan kepercayaan pengguna (minimisasi data, audit bias).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKENARIO PEMBELAJARAN -->
+  <section id="skenario" style="background-color: white;">
+    <div class="section-head">
+      <div class="eyebrow">Siklus 5 Tahap</div>
+      <h2>Dari Penguasaan Konsep Menuju Inovasi</h2>
+      <p>Skenario penggunaan DeepLearnAI mengikuti lima tahap berulang.</p>
+    </div>
+    <div class="phase-grid">
+      <div class="penta-card" style="border-left-color: #2563EB;">
+        <h4>1. Diagnose</h4>
+        <p>Asesmen singkat mengidentifikasi pengetahuan awal dan miskonsepsi.</p>
+      </div>
+      <div class="penta-card" style="border-left-color: #F59E0B;">
+        <h4>2. Personalize</h4>
+        <p>Sistem menyusun jalur belajar dengan tingkat dukungan berbeda.</p>
+      </div>
+      <div class="penta-card" style="border-left-color: #10B981;">
+        <h4>3. Collaborate</h4>
+        <p>Guru membentuk kelompok berdasar rekomendasi sistem & konteks sosial kelas.</p>
+      </div>
+      <div class="penta-card" style="border-left-color: #8B5CF6;">
+        <h4>4. Create</h4>
+        <p>Murid menyelesaikan proyek solusi lokal melalui Innovation Studio.</p>
+      </div>
+      <div class="penta-card" style="border-left-color: #EF4444;">
+        <h4>5. Reflect</h4>
+        <p>Murid menilai proses; guru memperbarui intervensi untuk siklus berikutnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP IMPLEMENTASI -->
+  <section id="roadmap">
+    <div class="section-head">
+      <div class="eyebrow">Langkah Bertahap</div>
+      <h2>Roadmap Implementasi</h2>
+      <p>Penerapan perlu dilakukan secara bertahap agar didasarkan pada bukti.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="road-card">
+        <div class="road-step">Fase 1</div>
+        <h4>Ko-Desain</h4>
+        <p>Bersama guru, murid, ahli kurikulum, psikometri, dan keamanan data.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-step">Fase 2</div>
+        <h4>Uji Coba (Pilot)</h4>
+        <p>Diterapkan pada sekolah dengan konteks & infrastruktur berbeda.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-step">Fase 3</div>
+        <h4>Validasi Dampak</h4>
+        <p>Audit bias, evaluasi hasil, dan penyiapan interoperabilitas Rumah Pendidikan.</p>
+      </div>
+      <div class="road-card">
+        <div class="road-step">Fase 4</div>
+        <h4>Perluasan Bertahap</h4>
+        <p>Dilakukan setelah efektivitas, keadilan, keamanan & kesiapan guru terpenuhi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET DAMPAK & MANFAAT -->
+  <section id="dampak" style="background-color: white;">
+    <div class="section-head">
+      <div class="eyebrow">Indikator Keberhasilan</div>
+      <h2>Target Dampak & Manfaat Pemangku Kepentingan</h2>
+    </div>
+    
+    <div class="table-container">
+      <table class="dampak-table">
+        <thead>
+          <tr>
+            <th>Dimensi</th>
+            <th>Indikator</th>
+            <th>Target Awal Pilot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Penguasaan kompetensi</td>
+            <td>Pertumbuhan skor dan proporsi ketuntasan</td>
+            <td>Peningkatan rerata minimal 10% dibanding pembanding</td>
+          </tr>
+          <tr>
+            <td>Keadilan belajar</td>
+            <td>Perubahan kesenjangan capaian antarwilayah</td>
+            <td>Kesenjangan tidak melebar: rekomendasi diaudit</td>
+          </tr>
+          <tr>
+            <td>Dukungan guru</td>
+            <td>Ketepatan identifikasi dan waktu tindak lanjut</td>
+            <td>Pengurangan waktu administrasi minimal 20%</td>
+          </tr>
+          <tr>
+            <td>Inovasi berkelanjutan</td>
+            <td>Jumlah dan kualitas proyek masalah lokal</td>
+            <td>Minimal satu proyek tervalidasi per tim per semester</td>
+          </tr>
+          <tr>
+            <td>Keamanan & kepercayaan</td>
+            <td>Insiden data dan penerimaan pengguna</td>
+            <td>Nol insiden kritis; 80% guru paham alasan rekomendasi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 50px;">Manfaat Utama</h3>
+    <div class="manfaat-grid">
+      <div class="manfaat-card">
+        <h4>Murid</h4>
+        <ul>
+          <li>Jalur belajar sesuai kecepatan & gaya belajar.</li>
+          <li>Umpan balik instan & proyek solusi lokal.</li>
+        </ul>
+      </div>
+      <div class="manfaat-card">
+        <h4>Guru</h4>
+        <ul>
+          <li>Deteksi kebutuhan murid lebih cepat & akurat.</li>
+          <li>Waktu administrasi berkurang, fokus mendidik.</li>
+        </ul>
+      </div>
+      <div class="manfaat-card">
+        <h4>Sekolah</h4>
+        <ul>
+          <li>Beroperasi pada infrastruktur terbatas (rendah bandwidth).</li>
+          <li>Terintegrasi dengan ekosistem Rumah Pendidikan.</li>
+        </ul>
+      </div>
+      <div class="manfaat-card">
+        <h4>Bangsa</h4>
+        <ul>
+          <li>Mendukung generasi inovator Indonesia Emas 2045.</li>
+          <li>Mengurangi kesenjangan mutu belajar antarwilayah.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAMPIRAN & TAMPILAN PRODUK -->
+  <section id="produk">
+    <div class="section-head">
+      <div class="eyebrow">Lampiran</div>
+      <h2>Lampiran Esai DeepLearnAI</h2>
+      <p>Penjelasan Visual Produk.</p>
+    </div>
+    <div class="product-gallery">
+      <!-- LAMPIRAN PRODUK -->
+      <div class="product-item">
+        <img src="26407.png" alt="Dashboard Utama DeepLearnAI">
+        <p><strong>Gambar 1.</strong> Menjelaskan Dashboard DeepLearnAI merupakan tampilan utama yang membantu peserta didik melihat dan mengelola proses belajar secara personal. Dashboard ini menampilkan ringkasan kompetensi yang telah dikuasai, rekomendasi materi dan latihan sesuai kebutuhan, perkembangan kompetensi, tugas dan kuis aktif, insight mengenai kekuatan serta bagian yang masih perlu ditingkatkan, serta akses ke proyek inovasi. Melalui tampilan ini, peserta didik dapat memantau perkembangan belajarnya secara mandiri, sedangkan guru dapat menggunakan informasi yang sama sebagai dasar pendampingan dan tindak lanjut pembelajaran yang tepat sasaran.</p>
+      </div>
+      <div class="product-item">
+        <img src="26410.png" alt="Panduan Penggunaan DeepLearnAI">
+        <p><strong>Gambar 2.</strong> Menjelaskan Panduan penggunaan dirancang agar peserta didik dapat menjalani proses pembelajaran personal dan adaptif tanpa hambatan teknis. Peserta didik terlebih dahulu masuk ke sistem, memilih mata pelajaran, kemudian mengikuti asesmen awal untuk mengetahui kemampuan dan kebutuhan belajarnya. Berdasarkan hasil tersebut, DeepLearnAI menyusun jalur belajar personal berupa materi, video, latihan adaptif, dan umpan balik yang sesuai dengan tingkat kemampuan peserta didik. Selanjutnya, peserta didik dapat memantau perkembangan kompetensi melalui fitur progres, serta mengikuti proyek dan kegiatan inovasi untuk menerapkan pengetahuan dalam menyelesaikan permasalahan nyata di lingkungan sekitarnya.</p>
+      </div>
+      <div class="product-item">
+        <img src="26430.png" alt="Cara Menggunakan DeepLearnAI bagi murid dan guru">
+        <p><strong>Gambar 3.</strong> Menjelaskan Panduan penggunaan DeepLearnAI untuk murid membantu murid belajar secara lebih terarah dan sesuai dengan kebutuhannya. Murid dapat masuk ke akun, memilih materi pelajaran, mengikuti jalur belajar personal yang disesuaikan dengan kemampuan, mengerjakan latihan secara interaktif, memperoleh umpan balik langsung, serta memantau perkembangan dan pencapaian belajar. Dengan memanfaatkan fitur tersebut secara konsisten, murid dapat belajar secara mandiri, memahami materi dengan lebih baik, dan mengembangkan potensi secara maksimal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO DASBOR -->
+  <section id="demo" style="background-color: white;">
+    <div class="section-head">
+      <div class="eyebrow">Coba Langsung</div>
+      <h2>Simulasi dasbor personalisasi</h2>
+      <p>Pilih murid untuk melihat bagaimana rekomendasi dan progres belajarnya berbeda-beda.</p>
+    </div>
+
+    <div class="demo-shell">
+      <div class="demo-topbar">
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+          <span style="font-weight:600;">Dasbor Guru — Semua Kelas</span>
+          <select id="studentSelect">
+            <option value="0">Tito Ridho Irvansyah (Gaya Visual)</option>
+            <option value="1">Adinda maulidya Zahrah (Gaya Auditori)</option>
+            <option value="2">Farhan Hidayat (Gaya Kinestetik)</option>
+          </select>
+        </div>
+        <div class="network-status" title="Sistem tersinkronisasi dengan server awan DeepLearnAI">
+          <span class="pulse-dot"></span> Tersinkronisasi (Cloud)
+        </div>
+      </div>
+      
+      <div class="demo-body">
+        <div class="demo-chart-area">
+          <h4 style="margin-top:0;">Progres pemahaman materi (5 minggu terakhir)</h4>
+          <canvas id="progressChart"></canvas>
+        </div>
+        
+        <div class="demo-side">
+          <div class="badge-card" id="studentBadge">
+             <span class="badge-icon" id="badgeIcon" style="margin-bottom: 0;">🎨</span> 
+             <div>
+               <div style="font-size: 0.75rem; color:#666; text-transform:uppercase;">Pencapaian AI</div>
+               <span id="badgeText">Kreator Visual</span>
+             </div>
+          </div>
+
+          <span class="rec-tag">Rekomendasi Sistem AI</span>
+          <div class="rec-card" id="recCard">
+            <p style="margin-top:5px;">Memuat rekomendasi…</p>
+          </div>
+          <div class="guru-note" id="guruNote">Catatan untuk guru akan muncul di sini.</div>
+          
+          <button class="btn-export" onclick="alert('File PDF sedang disiapkan...\n\nFitur ini akan mengekspor grafik perkembangan siswa dan rekomendasi AI agar dapat dibagikan kepada Orang Tua/Wali Murid di rumah.')">
+            🖨️ Cetak Laporan Wali Murid
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENUTUP & REFERENSI -->
+  <section id="penutup">
+    <div class="vision-section">
+      <h2>Penutup</h2>
+      <p>DeepLearnAI menghadirkan transformasi pendidikan melalui pembelajaran adaptif yang membantu guru memahami kebutuhan setiap murid secara lebih cepat dan tepat, dengan tetap menempatkan guru sebagai pengambil keputusan utama. Melalui pengembangan berkelanjutan dan terintegrasi, sistem berpotensi mendukung lahirnya generasi Indonesia Emas 2045.</p>
+    </div>
+
+    <div class="section-head" style="margin-top: 60px;">
+      <h2>Daftar Pustaka</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">Alfredo, R., dkk. (2024). Human-centred learning analytics...</div>
+      <div class="ref-card">Alrawashdeh, G. S., dkk. (2024). Exploring the impact of personalized...</div>
+      <div class="ref-card">Fortuna, A., dkk. (2025). Artificial intelligence in personalized learning...</div>
+      <div class="ref-card">OECD. (2023). PISA 2022 results...</div>
+      <div class="ref-card">UNESCO. (2023). Guidance for generative AI in education...</div>
+      <div class="ref-card">Wiley, K., dkk. (2024). A human-centred learning analytics approach...</div>
+    </div>
+  </section>
+
+  <!-- TIM & KAMPUS -->
+  <section id="tim" style="background-color: white;">
+    <div class="section-head">
+      <div class="eyebrow">Penyusun Gagasan</div>
+      <h2>Tim DeepLearnAI</h2>
+      <p>Disusun oleh mahasiswa Program Studi PGSD.</p>
+    </div>
+    
+    <div class="team-card">
+      <a href="https://stkipalitb.ac.id/" target="_blank" class="campus-link" title="Kunjungi Website STKIP Al Islam Tunas Bangsa">
+        <img src="logo-kampus.png" alt="Logo STKIP Al Islam Tunas Bangsa" class="team-logo">
+      </a>
+      
+      <div class="team-info">
+        <a href="https://stkipalitb.ac.id/" target="_blank" class="campus-text-link">
+          <div class="campus" style="font-weight:600;">Sekolah Tinggi Keguruan dan Ilmu Pendidikan</div>
+          <div class="prodi">(STKIP) Al Islam Tunas Bangsa — Bandar Lampung</div>
+        </a>
+        
+        <div class="team-members">
+          <button type="button" class="member-chip" data-name="Tito Ridho Irvansyah" data-nim="24020015" data-photo="tito.png" data-ig="ridho_tito_097">
+            Tito Ridho Irvansyah
+          </button>
+          <button type="button" class="member-chip" data-name="Adinda maulidya Zahrah" data-nim="24020032" data-photo="nadin.png" data-ig="adndamldy_">
+            Adinda maulidya Zahrah
+          </button>
+          <button type="button" class="member-chip" data-name="Farhan Hidayat" data-nim="24020030" data-photo="farhan.png" data-ig="fr_hid">
+            Farhan Hidayat
+          </button>
+        </div>
+
+        <div class="team-photo-box" id="teamPhotoBox">
+          <img id="teamPhotoImg" src="" alt="" title="Buka Instagram Profile">
+          <div style="flex-grow: 1;">
+            <div class="tpb-name" id="teamPhotoName"></div>
+            <div class="tpb-role" id="teamPhotoNim"></div>
+          </div>
+          <a href="#" target="_blank" id="teamPhotoIg" class="btn-ig">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span id="teamPhotoIgText">Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER DENGAN LOGO PIN & LINK IG -->
+<footer>
+  <div class="container footer-row"> 
+    <p><b>DeepLearnAI — Prototipe Konsep Esai</b></p>
+    
+    <a href="https://www.instagram.com/pin_unila?igsh=MWt5ZHludnFncDRsZQ==" target="_blank" class="pin-link" title="Kunjungi Instagram PIN Unila">
+      <img src="27693.jpg" alt="Logo PIN ke-11" class="pin-logo"><br>
+      Disusun khusus untuk Lomba Esai Pekan Ilmiah Nasional (PIN) ke-11 Tahun 2026
+    </a>
+
+    <p style="margin-top: 5px;">Unit Kegiatan Mahasiswa Penelitian (UKM-P) Universitas Lampung.</p>
+    <p style="font-size: 0.8rem; opacity: 0.7; margin-top:15px;">Dibuat dengan HTML, CSS &amp; JavaScript murni.</p> 
+  </div>
+</footer>
+
+<!-- MODAL POSTER INOVASI -->
+<div id="posterModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 style="text-align:center; margin-top:0;">Poster Inovasi DeepLearnAI</h3>
+    <div style="width: 100%; height: 400px; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 2px dashed #ccc;">
+      <p style="color: #666; text-align: center;">[Poster akan tersedia untuk 10 Finalis]</p> 
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
